@@ -73,7 +73,7 @@ console.log('Discount: ', discount);
 const discountAmount = ticketPrice * discount;
 console.log('Discount amount: ', discountAmount);
 
-ticketPrice = ticketPrice - discountAmount;
+ticketPrice -=  discountAmount;
 
 console.log('Discounted price: ', ticketPrice);
 
