@@ -41,6 +41,13 @@ const/let
 
 */
 
-// Selezione e salva il valore del primo input
-const km = document.getElementById('meter').value;
-console.log(km.innerHTML);
+// Selezionare il bottone che genera il biglietto e salvarlo in una variabile
+const generateBtn = document.getElementById('generate');
+console.log(generateBtn);
+
+// Selezionare e salvare il valore del primo input in una variabile
+const km = Number(document.getElementById("meter").value);
+console.log(km);
+
+
+
