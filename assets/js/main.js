@@ -41,4 +41,6 @@ const/let
 
 */
 
-
+// Selezione e salva il valore del primo input
+const km = document.getElementById('meter').value;
+console.log(km.innerHTML);
