@@ -35,19 +35,29 @@ cercate di farla vostra.
 
 /*
 STRUMENTI:
-const/let
-
-
+-const/let
+-addEventListener
+-if/else
 
 */
 
 // Selezionare il bottone che genera il biglietto e salvarlo in una variabile
 const generateBtn = document.getElementById('generate');
-console.log(generateBtn);
+//console.log(generateBtn);
 
-// Selezionare e salvare il valore del primo input in una variabile
-const km = Number(document.getElementById("meter").value);
-console.log(km);
+generateBtn.addEventListener('click', function() {
+  //console.log(km);
+  console.log('CLICK');
+
+  // Selezionare e salvare il valore del primo input in una variabile
+  const km = document.getElementById("meter").value;
+  console.log('Distanza: ', km);
+
+  // Selezionare e salvare il valore del primo input in una variabile
+const ageUser = document.getElementById("age").value;
+console.log('Età: ', km);
+});
+
 
 
 
