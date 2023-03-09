@@ -46,7 +46,6 @@ const generateBtn = document.getElementById('generate');
 //console.log(generateBtn);
 
 generateBtn.addEventListener('click', function() {
-  //console.log(km);
   console.log('CLICK');
 
   // Selezionare e salvare il valore del primo input in una variabile
@@ -54,8 +53,26 @@ generateBtn.addEventListener('click', function() {
   console.log('Distanza: ', km);
 
   // Selezionare e salvare il valore del primo input in una variabile
-const ageUser = document.getElementById("age").value;
+const userAge = document.getElementById("age").value;
 console.log('Età: ', km);
+
+const priceForKm = 0.21;
+let ticketPrice = km * priceForKm;
+console.log('Prezzo intero: ', ticketPrice);
+let discount = 0;
+if(userAge < 18) {
+  discount = 0.2;
+} else if (userAge > 65) {
+  discount = 0.4;
+}
+console.log('Discount: ', discount);
+
+const discountAmount = ticketPrice * discount;
+console.log('Discount amount: ', discountAmount);
+
+ticketPrice = ticketPrice - discountAmount;
+
+console.log('Discounted price: ', ticketPrice);
 });
 
 
