@@ -48,13 +48,17 @@ const generateBtn = document.getElementById('generate');
 generateBtn.addEventListener('click', function() {
   console.log('CLICK');
 
-  // Selezionare e salvare il valore del primo input in una variabile
-  const km = document.getElementById("meter").value;
-  console.log('Distanza: ', km);
+// Selezionare e salvare il valore del primo input in una variabile
+const userName = document.getElementById("name").value;
+console.log('Nome e Cognome: ', userName);  
 
-  // Selezionare e salvare il valore del primo input in una variabile
+// Selezionare e salvare il valore del secondo input in una variabile
+const km = document.getElementById("meter").value;
+console.log('Distanza: ', km);
+
+// Selezionare e salvare il valore del terzo input in una variabile
 const userAge = document.getElementById("age").value;
-console.log('Età: ', km);
+console.log('Età: ', userAge);
 
 const priceForKm = 0.21;
 let ticketPrice = km * priceForKm;
@@ -73,6 +77,14 @@ console.log('Discount amount: ', discountAmount);
 ticketPrice = ticketPrice - discountAmount;
 
 console.log('Discounted price: ', ticketPrice);
+
+// Stampo nome passeggero
+const completeName = document.getElementById('namePasseger');
+completeName.innerHTML = `${userName}`
+
+// Stampo prezzo biglietto
+const priceElement = document.getElementById('price');
+priceElement.innerHTML = `€ ${ticketPrice.toFixed(2)}`
 });
 
 
