@@ -43,7 +43,6 @@ STRUMENTI:
 
 // Selezionare il bottone che genera il biglietto e salvarlo in una variabile
 const generateBtn = document.getElementById('generate');
-//console.log(generateBtn);
 
 generateBtn.addEventListener('click', function() {
   console.log('CLICK');
@@ -80,13 +79,20 @@ console.log('Discounted price: ', ticketPrice);
 
 // Stampo nome passeggero
 const completeName = document.getElementById('namePasseger');
-completeName.innerHTML = `${userName}`
+completeName.innerHTML = `${userName}`;
 
 // Stampo prezzo biglietto
 const priceElement = document.getElementById('price');
-priceElement.innerHTML = `€ ${ticketPrice.toFixed(2)}`
+priceElement.innerHTML = `€ ${ticketPrice.toFixed(2)}`;
 });
 
+// Selezionare il bottone che resetta il biglietto e salvarlo in una variabile
+const resetBtn = document.getElementById('reset');
 
-
-
+resetBtn.addEventListener('click', function() {
+  document.getElementById("name").value = "";
+  document.getElementById("meter").value = "";
+  document.getElementById("age").value = "";
+  document.getElementById('namePasseger').innerText = ""; 
+  document.getElementById('price').innerText = "";
+});
